@@ -10,6 +10,7 @@ jobs:
     name: Update Major Version Tag
     runs-on: ubuntu-latest
     steps:
-      - uses: nowactions/update-majorver@v1
+      - uses: actions/checkout@v3
+      - uses: "."
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
