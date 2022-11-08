@@ -23,7 +23,7 @@ export default async function run(): Promise<void> {
     const getRefParams = {
       owner: context.repo.owner,
       repo: context.repo.repo,
-      ref: `tags/${major}`,
+      ref: `refs/tags/${major}`,
     };
 
     let ref;
