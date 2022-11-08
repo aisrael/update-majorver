@@ -62,7 +62,7 @@ describe("Update Major Version", () => {
     expect(updateRef).toHaveBeenCalledWith({
       owner: "nowactions",
       repo: "update-majorver",
-      ref: "tags/v1",
+      ref: "refs/tags/v1",
       sha: "commit_sha",
       force: true,
     });
