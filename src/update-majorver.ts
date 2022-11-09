@@ -35,8 +35,8 @@ export default async function run(): Promise<void> {
     }
 
     if (ref) {
-      core.info(`updating tag ${major} to point to ${sha}`)
-      let result = await octokit.git.updateRef({
+      core.info(`updating tag ${major} to point to ${sha}`);
+      const result = await octokit.git.updateRef({
         ...getRefParams,
         sha,
         force: true,
