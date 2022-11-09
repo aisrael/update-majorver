@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint 'src/**.ts' 'tests/**.ts' --fix",
     "test": "eslint 'src/**.ts' 'tests/**.ts' && tsc --noEmit && jest --coverage",
-    "build": "tsc",
+    "build": "ncc build src/main.ts -o dist",
     "precommit": "npm run build && git add dist/",
     "release": "PACKAGE_VERSION=v$(grep -m1 version package.json | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag -a $PACKAGE_VERSION -m $PACKAGE_VERSION && git push --tags"
   },
